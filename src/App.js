@@ -1,11 +1,14 @@
-import React from "react";
-import "./style.css";
+import Component1 from './Component1';
+import Component2 from './Component2';
+
+import React from 'react';
+import './style.css';
 
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <Component1 name="Ashish" />
+      <Component2 />
     </div>
   );
 }
