@@ -5,7 +5,7 @@ const Component1 = props => {
   return (
     <div>
       <h1>{props.name}</h1>
-      <h1>count is : {count}</h1>
+      <h1>count is : {props.count}</h1>
       <button onClick={props.increaseCount}>Inc by 5</button>
     </div>
   );
