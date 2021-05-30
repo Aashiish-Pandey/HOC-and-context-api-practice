@@ -1,14 +1,15 @@
-import React from 'react';
-import withCounter from './withCounter';
+import React, { useContext, Component } from "react";
+import withIncrement from "./withIncrement";
 
-const Component1 = props => {
-  return (
-    <div>
-      <h1>{props.name}</h1>
-      <h1>count is : {props.count}</h1>
-      <button onClick={props.increaseCount}>Inc by 5</button>
-    </div>
-  );
-};
+class Component1 extends Component {
+  render() {
+    return (
+      <div>
+        <h1>{this.props.count}</h1>
+        <button onClick={() => this.props.setCount()}>Increment Counter</button>
+      </div>
+    );
+  }
+}
 
-export default Component1;
+export default withIncrement(Component1, 100);

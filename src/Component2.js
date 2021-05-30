@@ -1,13 +1,14 @@
-import React from 'react';
-import withCounter from './withCounter';
+import React, { useContext } from "react";
+import { myContext } from "./myContext";
+import withIncrement from "./withIncrement";
 
-const Component2 = props => {
+const Component2 = (props) => {
   return (
     <div>
-      <h1>count is : {props.count}</h1>
-      <button onClick={props.increaseCount}>Inc by 10</button>
+      <h2>{props.count}</h2>
+      <button onClick={() => props.setCount()}>Decrement</button>
     </div>
   );
 };
 
-export default withCounter(Component2, 10);
+export default withIncrement(Component2, -10);
